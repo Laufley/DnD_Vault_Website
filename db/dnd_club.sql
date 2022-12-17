@@ -4,12 +4,17 @@ DROP TABLE campaigns;
 
 CREATE TABLE players (
     id SERIAL PRIMARY KEY,
-    name VARCHAR(255)
+    full_name VARCHAR(255),
+    phone VARCHAR(255)
 );
 
 CREATE TABLE campaigns (
     id SERIAL PRIMARY KEY,
-    name VARCHAR(255)
+    title VARCHAR(255),
+    genre VARCHAR(255),
+    dm VARCHAR(255),
+    max_capacity INT,
+    price INT
 );
 
 CREATE TABLE players_history (
