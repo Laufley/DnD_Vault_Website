@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>D&D Club</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body id="grid-container">
+<main>
+    <header id = "header">
+        <h1>D&D CLUB</h1>
+        <nav id="navigation">
+            <ul>
+                <li>
+                    <a href="/home">Home</a>
+                </li>
+                <li>
+                    <a href="/campaigns">Campaigns</a>
+                </li>
+                <li>
+                    <a href="/dm">Dungeon Masters</a>
+                </li>
+                <li>
+                    <a href="/upcoming">Upcoming Sessions</a>
+                </li>
+                <li>
+                    <a href="/tips">Tips & Guides</a>
+                </li>
+                <li>
+                    <a href="/management/login">Management</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section id="content">
+        {% block content %}
+
+        {% endblock%}
+    </section>
+</main>
+<footer id="footer">
+    <ul>
+        <li>
+            <a href="/about">About</a>
+        </li>
+        <li>
+            <a href="/contact">Contact us</a>
+        </li>
+    </ul>
+</footer>
+</body>
+</html>
