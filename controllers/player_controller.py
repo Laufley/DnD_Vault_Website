@@ -1,8 +1,10 @@
 from flask import Flask, render_template, request, redirect
 from flask import Blueprint
 from models.player import Player
+from models.player_history import Player_history
 import repositories.player_repository as player_repository
 import repositories.campaign_repository as campaign_repository
+import repositories.player_history_repository as player_history_repository
 
 players_blueprint = Blueprint('players', __name__)
 
@@ -17,9 +19,10 @@ def players():
 @players_blueprint.route('/management/player/<id>', methods=['GET'])
 def show_player(id):
     player = player_repository.select(id)
+    list_of_sessions = campaign_repository.select_all_campaigns() 
     if not player:
         return redirect("/management/players")
-    return render_template ('/management/player.html', guest = player)
+    return render_template ('/management/player.html', guest = player, all_sessions = list_of_sessions )
 
 # CREATE new player
 # POST '/management/players'
@@ -58,4 +61,12 @@ def delete_player(id):
     player_repository.delete(id)
     return redirect('/management/players')
     
-
+#Add player to campaign
+@players_blueprint.route("/management/player/<id>/join_session", methods=['POST'])
+def add_player_to_session(id):
+    campaign_id = request.form['campaign_id']
+    campaign = campaign_repository.select(campaign_id)
+    player = player_repository.select(id)
+    player_history = Player_history(player, campaign)
+    player_history_repository.save(player_history)
+    return redirect('/management/players')

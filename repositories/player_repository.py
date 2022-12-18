@@ -46,3 +46,16 @@ def update(player):
     sql = "UPDATE players SET (full_name, phone) = (%s, %s) WHERE id = %s"
     values = [player.full_name, player.phone, player.id]
     run_sql(sql, values)
+    
+def players_per_campaign(campaign_id):
+    party = []
+
+    sql = "SELECT players.* FROM players INNER JOIN players_history ON players_history.player_id = players.id WHERE campaign_id = %s"
+    values = [campaign_id]
+    results = run_sql(sql, values)
+
+    for row in results:
+        party_member = Player(row['full_name'], row['phone'], row['id'])
+        party.append(party_member)
+
+    return party

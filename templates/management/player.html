@@ -6,6 +6,7 @@
         <ul>
             <li>{{guest.full_name}}</li>
             <li>{{guest.phone}}</li>
+        </ul>
 
             <a href="/management/players/{{guest.id}}/edit">Update</a>
             
@@ -13,6 +14,18 @@
             <form class="delete" action="/management/player/{{guest.id}}/delete" method="POST">
             <input id="delete_player" type="submit" value="delete-player">
             </form>
-        </ul>
+
+            <div>
+                <form action="/management/player/{{guest.id}}/join_session" method="post">
+                <label for="choose_campaign">Choose session:</label>
+                <select id="choose_campaign" name="campaign_id">
+                    {% for session in all_sessions %}
+                        <option value="{{ session.id }}">{{ session.title }}</option>
+                    {% endfor %}
+                    </select>
+            </div>
+                <button type="submit">Add to campaign</button>
+            </form>
+        
     </div>
 {% endblock %}

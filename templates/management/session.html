@@ -18,4 +18,12 @@
             </form>
         </ul>
     </div>
+    <div>
+        <h2> Current Party</h2>
+            <ol>
+            {% for members in party %}
+                <li>{{members.full_name}}</li>
+            {% endfor %}
+            </ol>
+    </div>
 {% endblock %}
