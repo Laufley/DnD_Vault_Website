@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div>
+        <h2>session information</h2>
+        <ul>
+            <li>{{session.title}}</li>
+            <li>{{session.genre}}</li>
+            <li>{{session.dm}}</li>
+            <li>{{session.max_capacity}}</li>
+            <li>{{session.price}}</li>
+
+            <a href="/management/sessions/{{session.id}}/edit">Update Session</a>
+            
+
+            <form class="delete" action="/management/session/{{session.id}}/delete" method="POST">
+            <input id="delete_player" type="submit" value="delete-session">
+            </form>
+        </ul>
+    </div>
+{% endblock %}

@@ -1,5 +1,42 @@
-{% extends 'base.html'%}
+{% extends "base.html" %}
 
 {% block content %}
-<h1>sessions list here</h1>
+    <div id="sesssions">
+        <h2>Current sessions</h2>
+            <ol> 
+            {% for session in all_sessions %}
+                <li>
+                    <a href="/management/session/{{session.id}}" target="_blank" id="all_sessions"> {{session.title}}</a>
+                </li>
+            {% endfor %}
+            </ol>
+    </div>
+    <div> 
+        <h2>Add session</h2>
+            <form action="/management/sessions" method="post">
+
+            <div>
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" placeholder="Campaign title" required autofocus>
+            </div>
+            <div>
+                <label for="genre">Genre:</label>
+                <input type="text" id="genre" name="genre" placeholder="Campaign genre" required autofocus>
+            </div>
+            <div>
+                <label for="dm">Dungeon Master:</label>
+                <input type="text" id="dm" name="dm" placeholder="Name" required autofocus>
+            </div>
+            <div>
+                <label for="max_capacity">Party limit:</label>
+                <input type="text" id="max_capacity" name="max_capacity" placeholder="number" required autofocus>
+            </div>
+            <div>
+                <label for="price">Price:</label>
+                <input type="text" id="price" name="price" placeholder="number" required autofocus>
+            </div>
+            <button type="submit">Add Session</button>
+            </form>
+    </div>
+        
 {% endblock %}

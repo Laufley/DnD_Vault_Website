@@ -9,6 +9,11 @@ import repositories.player_repository as player_repository
 def delete_all():
     sql = "DELETE FROM campaigns"
     run_sql(sql)
+    
+def delete(id):
+    sql = "DELETE FROM campaigns WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
 
 def save(campaign):
     sql = "INSERT INTO campaigns (title, genre, dm, max_capacity, price) VALUES ( %s, %s, %s, %s, %s) RETURNING *"
@@ -24,7 +29,7 @@ def select_all_campaigns():
     sql = "SELECT * FROM campaigns"
     results = run_sql(sql)
     for row in results:
-        campaign = Campaign(row['title'], row['genre'], row['dm'], row['price'], row['id'])
+        campaign = Campaign(row['title'], row['genre'], row['dm'], row['max_capacity'], row['price'], row['id'])
         list_of_campaigns.append(campaign)
     return list_of_campaigns
 

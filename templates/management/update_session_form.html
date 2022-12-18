@@ -1,0 +1,30 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<h1>UPDATE Session</h1>
+    <form action="/management/session/{{session.id}}/update" method="post"> 
+        <div>
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" value="{{session.title}}" required autofocus>
+        </div>
+        <div>
+            <label for="genre">Genre:</label>
+            <input type="text" id="genre" name="genre" value="{{session.genre}}" required autofocus>
+        </div>
+        <div>
+            <label for="dm"> Dungeon Master:</label>
+            <input type="text" id="dm" name="dm" value="{{session.dm}}" required autofocus>
+        </div>
+        <div>
+            <label for="max_capacity">Party limit:</label>
+            <input type="text" id="max_capacity" name="max_capacity" value="{{session.max_capacity}}" required autofocus>
+        </div>
+        <div>
+            <label for="price">price:</label>
+            <input type="text" id="price" name="price" value="{{session.price}}" required autofocus>
+        </div>
+        
+        <button type="submit"> Update </button>
+
+    </form>
+{% endblock %}

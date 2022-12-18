@@ -46,7 +46,20 @@ def management_board():
     return render_template('management/board.html', title="D&D Club")
 
 
+# # GET list of campaigns
+@public_blueprint.route("/campaigns", methods=['GET'] )
+def campaigns():
+    list_of_campaigns = campaign_repository.select_all_campaigns() # NEW
+    return render_template('public/campaigns/campaigns.html', all_campaigns= list_of_campaigns)
 
+# SHOW
+# GET '/campaigns/<id>'
+@public_blueprint.route('/campaign/<id>', methods=['GET'])
+def show_campaign(id):
+    campaign = campaign_repository.select(id)
+    if not campaign:
+        return redirect('/campaigns')
+    return render_template ('public/campaigns/campaign.html', campaign = campaign)
 
 
 
