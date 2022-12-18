@@ -19,10 +19,12 @@ def players():
 @players_blueprint.route('/management/player/<id>', methods=['GET'])
 def show_player(id):
     player = player_repository.select(id)
+    missions = campaign_repository.campaigns_per_player(id)
     list_of_sessions = campaign_repository.select_all_campaigns() 
     if not player:
         return redirect("/management/players")
-    return render_template ('/management/player.html', guest = player, all_sessions = list_of_sessions )
+    return render_template ('/management/player.html', guest = player, all_sessions = list_of_sessions, missions = missions )
+
 
 # CREATE new player
 # POST '/management/players'
@@ -68,5 +70,10 @@ def add_player_to_session(id):
     campaign = campaign_repository.select(campaign_id)
     player = player_repository.select(id)
     player_history = Player_history(player, campaign)
-    player_history_repository.save(player_history)
-    return redirect('/management/players')
+    availability = player_repository.availability(campaign)
+    if availability == True:
+        player_history_repository.save(player_history)
+        return redirect('/management/players')
+    else:
+        return redirect('/management/players')
+    

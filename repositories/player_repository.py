@@ -59,3 +59,11 @@ def players_per_campaign(campaign_id):
         party.append(party_member)
 
     return party
+
+
+def availability(campaign):
+    lenght = len(players_per_campaign(campaign.id))
+    if lenght < campaign.max_capacity:
+        return True
+    else:
+        return False

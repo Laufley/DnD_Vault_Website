@@ -7,6 +7,13 @@
             <li>{{guest.full_name}}</li>
             <li>{{guest.phone}}</li>
         </ul>
+        <h2>Current Adventures:</h2>
+        <ol>
+        {% for mission in missions %}
+            <li>{{mission.title}}</li>
+        {% endfor %}
+        </ol>
+
 
             <a href="/management/players/{{guest.id}}/edit">Update</a>
             

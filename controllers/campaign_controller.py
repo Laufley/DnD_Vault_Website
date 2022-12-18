@@ -23,11 +23,6 @@ def show_session(id):
         return redirect('/management/sessions')
     return render_template ('/management/session.html', session = session, party = party)
 
-# def show(id):
-#     location = location_repository.select(id)
-#     users = user_repository.users_for_location(location)
-#     return render_template("locations/show.html", location=location, users=users)
-
 # CREATE new campaign
 # POST '/management/campaigns'
 @campaigns_blueprint.route("/management/sessions",  methods=['POST'])

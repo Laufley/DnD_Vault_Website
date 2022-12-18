@@ -49,3 +49,17 @@ def update(campaign):
     sql = "UPDATE campaigns SET (title, genre, dm, max_capacity, price) = (%s, %s, %s, %s, %s) WHERE id = %s"
     values = [campaign.title, campaign.genre, campaign.dm, campaign.max_capacity, campaign.price, campaign.date, campaign.id]
     run_sql(sql, values)
+    
+
+def campaigns_per_player(player_id):
+    missions = []
+
+    sql = "SELECT campaigns.* FROM campaigns INNER JOIN players_history ON players_history.campaign_id = campaigns.id WHERE player_id = %s"
+    values = [player_id]
+    results = run_sql(sql, values)
+
+    for row in results:
+        single_mission = Campaign(row['title'], row['genre'], row['dm'], row['max_capacity'], row['price'])
+        missions.append(single_mission)
+
+    return missions
