@@ -21,9 +21,14 @@ def show_player(id):
     player = player_repository.select(id)
     missions = campaign_repository.campaigns_per_player(id)
     list_of_sessions = campaign_repository.select_all_campaigns() 
+    available_sessions = []
+    for session in list_of_sessions:
+        if player_repository.availability(session) == True:
+            available_sessions.append(session)
+            
     if not player:
         return redirect("/management/players")
-    return render_template ('/management/player.html', guest = player, all_sessions = list_of_sessions, missions = missions )
+    return render_template ('/management/player.html', guest = player, all_sessions = list_of_sessions, missions = missions,  available_sessions = available_sessions  )
 
 
 # CREATE new player
