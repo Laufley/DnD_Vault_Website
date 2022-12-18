@@ -6,6 +6,11 @@ from models.campaign import Campaign
 def delete_all():
     sql = "DELETE FROM players"
     run_sql(sql)
+    
+def delete(id):
+    sql = "DELETE FROM players WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
 
 def save(player):
     sql = "INSERT INTO players (full_name, phone) VALUES ( %s, %s ) RETURNING *"

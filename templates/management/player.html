@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div>
+        <h2>Player information</h2>
+        <ul>
+            <li>{{guest.full_name}}</li>
+            <li>{{guest.phone}}</li>
+
+            <a href="/management/players/{{guest.id}}/edit">Update</a>
+            
+
+            <form class="delete" action="/management/player/{{guest.id}}/delete" method="POST">
+            <input id="delete_player" type="submit" value="delete-player">
+            </form>
+        </ul>
+    </div>
+{% endblock %}

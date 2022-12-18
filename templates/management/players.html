@@ -1,5 +1,30 @@
-{% extends 'base.html'%}
+{% extends "base.html" %}
 
 {% block content %}
-<h1>players list here</h1>
+    <div id="players">
+        <h2>Current players</h2>
+            <ol> 
+            {% for guest in all_players %}
+                <li>
+                    <a href="/management/player/{{guest.id}}" target="_blank" id="player_list"> {{guest.full_name}}</a>
+                </li>
+            {% endfor %}
+            </ol>
+    </div>
+    <div> 
+        <h2>Add player</h2>
+            <form action="/management/players" method="post">
+
+            <div>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="full_name" placeholder="Name and Surname" required autofocus>
+            </div>
+            <div>
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone" placeholder="Phone Number" required autofocus>
+            </div>
+            <button type="submit">Add player</button>
+            </form>
+    </div>
+        
 {% endblock %}
