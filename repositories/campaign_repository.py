@@ -29,7 +29,7 @@ def select_all_campaigns():
     sql = "SELECT * FROM campaigns"
     results = run_sql(sql)
     for row in results:
-        campaign = Campaign(row['title'], row['genre'], row['dm'], row['max_capacity'], row['price'], row['id'])
+        campaign = Campaign(row['title'], row['genre'], row['dm'], row['max_capacity'], row['price'], row['id'],)
         list_of_campaigns.append(campaign)
     return list_of_campaigns
 
@@ -42,10 +42,10 @@ def select(id):
     
     if results:
         found = results[0]
-        campaign = Campaign(found['title'], found['genre'], found['dm'], found['max_capacity'], found['price'], found['id'])
+        campaign = Campaign(found['title'], found['genre'], found['dm'], found['max_capacity'], found['price'],  found['id'],)
     return campaign
 
 def update(campaign):
     sql = "UPDATE campaigns SET (title, genre, dm, max_capacity, price) = (%s, %s, %s, %s, %s) WHERE id = %s"
-    values = [campaign.title, campaign.genre, campaign.dm, campaign.max_capacity, campaign.price, campaign.id]
+    values = [campaign.title, campaign.genre, campaign.dm, campaign.max_capacity, campaign.price, campaign.date, campaign.id]
     run_sql(sql, values)

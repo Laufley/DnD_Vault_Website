@@ -9,10 +9,6 @@ import repositories.player_history_repository as player_history_repository
 
 public_blueprint = Blueprint("public", __name__)
 
-@public_blueprint.route('/home')
-def home():
-    return render_template('home.html', title="D&D Club")
-
 @public_blueprint.route('/about')
 def about():
     return render_template('public/about.html', title="D&D Club")
