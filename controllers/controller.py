@@ -43,10 +43,10 @@ def management_board():
 
 
 # # GET list of campaigns
-@public_blueprint.route("/campaigns", methods=['GET'] )
+@public_blueprint.route("/home", methods=['GET'] )
 def campaigns():
     list_of_campaigns = campaign_repository.select_all_campaigns() # NEW
-    return render_template('public/campaigns/campaigns.html', all_campaigns= list_of_campaigns)
+    return render_template('/public/home.html', all_campaigns= list_of_campaigns)
 
 # SHOW
 # GET '/campaigns/<id>'

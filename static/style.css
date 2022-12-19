@@ -1,4 +1,5 @@
-/* Intro page */
+/* Intro (Index) page */
+
 .empty-page {
     background-color:  black;
 }
@@ -6,6 +7,7 @@
 #intro-text {
     color: white;
 }
+
 /* Base CSS*/
 
 body {
@@ -21,7 +23,7 @@ body {
 #title {
     font-style: none;
     margin-top: 1rem;
-    color: white;
+    color: blue;
     display: flex;
     flex-direction: column;
     align-items: left;
@@ -30,7 +32,7 @@ body {
 
 #navigation > ul {
     font-family: 'Lobster', sans-serif;
-    color: white;;
+    color: rgb(75, 9, 207);;
     list-style: none;
     display: flex;
     flex-direction:row;
@@ -78,61 +80,5 @@ body {
     'footer footer'; 
     
 }
-
-/* #book_collection {
-font-family: monospace;
-}
-
-#single {
-font-family: 'Dancing Script', sans-serif;
-}   */
-
-/* #add_to_favourites{
-display: flex;
-margin-left: 0rem;
-border-radius: 5rem;
-background-color: #a0e6d4;
-border: none;
-color: rgb(255, 255, 255);
-width: 10rem;
-} */
-
-/* #delete_button {
-display: flex;
-margin-left: 0rem;
-border-radius: 5rem;
-background-color: #ed8fdb;
-border: none;
-color: white;
-width: 10rem;
-} */
-
-
-/* #add-a-book{
-background-color: rgb(255, 167, 94);
-width: 100%;
-padding-bottom:1rem;
-grid-area: addition;
-}
-
-#new {
-font-family: 'Dancing Script', sans-serif;
-} */
-
-
-
-
-/* #img{
-margin-left: 50px;
-}
-
-#link{
-margin-left: 50px;
-}
-
-.text {
-font-family: monospace;
-} */
-
 
 

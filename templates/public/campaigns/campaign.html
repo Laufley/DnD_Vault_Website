@@ -2,13 +2,14 @@
 
 {% block content %}
     <div>
-        <h2>Campaign information</h2>
+        <h1> Back to campaigns</h1>
+
+        <h2>{{campaign.title}} details</h2>
         <ul>
-            <li>{{campaign.title}}</li>
-            <li>{{campaign.genre}}</li>
-            <li>{{campaign.dm}}</li>
-            <li>{{campaign.max_capacity}}</li>
-            <li>{{campaign.price}}</li>
+            <li>Genre: {{campaign.genre}}</li>
+            <li>Dungeon Master: {{campaign.dm}}</li>
+            <li>Max number of players: {{campaign.max_capacity}}</li>
+            <li>price per session: {{campaign.price}}</li>
         </ul>
     </div>
 {% endblock %}
