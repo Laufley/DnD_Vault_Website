@@ -2,7 +2,7 @@
 
 {% block content %}
     <div>
-        <h1> Back to campaigns</h1>
+        <a href="/home"> <h3> Back to campaigns</h3></a>
 
         <h2>{{campaign.title}} details</h2>
         <ul>
@@ -10,6 +10,7 @@
             <li>Dungeon Master: {{campaign.dm}}</li>
             <li>Max number of players: {{campaign.max_capacity}}</li>
             <li>price per session: {{campaign.price}}</li>
+            <li>Campaign brief: {{campaign.details}}</li>
         </ul>
     </div>
 {% endblock %}

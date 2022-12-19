@@ -18,10 +18,10 @@ player_2 = Player("Ian Boyd", "+447898517041")
 player_repository.save(player_2)
 
 
-campaign_1 = Campaign("Quest for Kaladesh", "fanasty", "Steve",  6, 15)
+campaign_1 = Campaign("Quest for Kaladesh", "fanasty", "Steve",  6, 15, "inspired in the MTG universe")
 campaign_repository.save(campaign_1)
 
-campaign_2= Campaign("Quest for Camelot", "Adventure", "Fred",  8, 15)
+campaign_2= Campaign("Quest for Camelot", "Adventure", "Fred",  8, 15, "inspired in a long-time classic" )
 campaign_repository.save(campaign_2)
 
 joint_1 = Player_history(player_2, campaign_1)

@@ -32,7 +32,8 @@ def create_campaign():
     dm = request.form['dm']
     max_capacity = request.form['max_capacity']
     price = request.form['price']
-    session = Campaign(title, genre, dm, max_capacity, price)
+    details = request.form['details']
+    session = Campaign(title, genre, dm, max_capacity, price, details)
     campaign_repository.save(session)
     return redirect('/management/sessions')
 
@@ -53,7 +54,8 @@ def update_campaign(id):
     dm = request.form['dm']
     max_capacity = request.form['max_capacity']
     price = request.form['price']
-    session = Campaign(title, genre, dm, max_capacity, price, id)
+    details = request.form['details']
+    session = Campaign(title, genre, dm, max_capacity, price, details, id)
     campaign_repository.update(session)
     return redirect(f'/management/session/{id}')
 #urls are string already, and i want to pass a value for id, so i can do an f string.

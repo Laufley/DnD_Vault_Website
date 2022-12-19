@@ -14,8 +14,8 @@ CREATE TABLE campaigns (
     genre VARCHAR(255),
     dm VARCHAR(255),
     max_capacity INT,
-    price INT
-    date 
+    price INT,
+    details VARCHAR(255) 
 );
 
 CREATE TABLE players_history (

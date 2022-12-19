@@ -1,10 +1,11 @@
 class Campaign:
-    def __init__(self, title, genre, dm, max_capacity, price, id= None):
+    def __init__(self, title, genre, dm, max_capacity, price, details, id= None):
         self.title = title
         self.genre = genre
         self.dm = dm
         self.max_capacity = max_capacity
         self.price = price
+        self.details = details
         self.id = id
         
         
