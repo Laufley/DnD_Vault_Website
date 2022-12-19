@@ -2,6 +2,8 @@
 
 {% block content %}
     <div id="sesssions">
+        <a href="/management/board"><h4>>>Back to Management Board</h4></a>
+
         <h2>Current sessions</h2>
             <ol> 
             {% for session in all_sessions %}
@@ -29,15 +31,16 @@
             </div>
             <div>
                 <label for="max_capacity">Party limit:</label>
-                <input type="text" id="max_capacity" name="max_capacity" placeholder="number">
+                <input type="text" id="max_capacity" name="max_capacity" placeholder="max party members">
             </div>
             <div>
                 <label for="price">Price:</label>
-                <input type="text" id="price" name="price" placeholder="number">
+                <input type="text" id="price" name="price" placeholder="price per session">
             </div>
             <div>
                 <label for="details">details:</label>
-                <input type="text" id="details" name="details" placeholder="campaign brief">
+                <textarea cols="90" id="details" name="details" rows="14" placeholder="campaign brief"></textarea>
+                <!-- <input type="text" id="details" name="details" maxlength="50" size="50" placeholder="campaign brief"> -->
             </div>
             <button type="submit">Add Session</button>
             </form>
