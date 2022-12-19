@@ -2,7 +2,7 @@
 
 .empty-page {
     background: url('images/door.jpeg');
-    background-size: 100%;
+    background-size: cover;
     /* background-color: black; */
     
 }
@@ -34,6 +34,15 @@ body {
     border-radius: 5%;
     
 }
+
+#reminder{
+    display: flex;
+    justify-content: right;
+    color: azure;
+    margin-right: 20px;
+    text-shadow: 3px 3px #0f0e0e;
+    margin-bottom: 10px;
+    }
 
 /* nav and grid */
 #navigation{
@@ -118,14 +127,17 @@ a:hover{
 }
 
 /* main title */
-.main_title.hover{
+/* #main_title a.link {
     color:hotpink;
+} */
+.main_title_link, .main_title_link:link, 
+.main_title_link:visited, .main_title_link:focus, 
+.main_title_link:active{
+color: rgb(226, 28, 127);
 }
 
-#reminder{
-display: flex;
-justify-content: right;
-color: azure;
-margin-right: 20px;
-text-shadow: 3px 3px #0f0e0e;
+.main_title_link:hover{
+    color:#ABE338;
 }
+
+
