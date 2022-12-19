@@ -5,7 +5,7 @@
             <ol id="home_list_campaigns"> 
             {% for campaign in all_campaigns %}
                 <li>
-                    <a href="/campaign/{{campaign.id}}" target="_blank" id="campaign_list"> {{campaign.title}}</a>
+                    <a class="linked_text" href="/campaign/{{campaign.id}}" target="_blank" id="campaign_list"><h2> {{campaign.title}}</h2></a>
                 </li>
             {% endfor %}
 {% endblock %}

@@ -2,23 +2,27 @@
 
 .empty-page {
     background: url('images/door.jpeg');
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-size: 100%;
     /* background-color: black; */
     
 }
 
 #intro-text {
     color: rgba(255, 255, 255, 0.862);
+    font-family: 'Cinzel', serif;
 }
 
 /* Base CSS*/
 
 body {
-    font-family: 'Lobster', sans-serif;
+    font-family: 'cinzel', serif;
     margin: 0rem;
     padding:0;
     min-height: 100vh;
+}
+
+.main_title.hover{
+    color:hotpink;
 
 }
 
@@ -31,7 +35,8 @@ body {
     flex-direction: column;
     align-items: left;
     width: 20%;
-    background-color: rgba(120, 85, 36, 0.419);
+    background-color: rgba(59, 41, 29, 0.77);
+    
 }
 
 /* nav and grid */
@@ -40,11 +45,11 @@ body {
     flex-direction:row;
     justify-content: space-between;
     width: 100%;
-    
 }
 
+
 #navigation > ul {
-    font-family: 'Lobster', sans-serif;
+    font-family: 'cinzel', serif;
     color: rgb(9, 207, 78);;
     list-style: none;
     margin-left: 40%;
@@ -53,25 +58,30 @@ body {
     display: flex;
     column-gap: 35px;
     text-align: center;
+    text-shadow: 2px 1px #0f0e0e;
 
     }
     
 #header{
     grid-area: header;
-    background-color: rgb(255, 167, 94);
+    background: url('images/dark_wood.jpeg');
+    /* background-color: rgb(255, 167, 94); */
+    background-color: rgb(132, 82, 33);
     height: 5.3rem;
     min-height: 15vh;
     width: 100%;
     }
     
 #main{
-    background: url('images/crypt.jpeg');
+    background: url('images/fame.png');
+    background-size: cover;
     grid-area: main;
     min-height: 80vh;
+    
     }
     
 #footer {
-    background-color: #9e9e9e;
+    background: url('images/stone_background.jpeg');
     grid-area: footer;
     max-height: 2rem;
     min-height: 5vh;
@@ -82,8 +92,9 @@ body {
 #footer > ul{
     display: flex;
     justify-content: center;
-    font-family: 'Lobster', sans-serif;
-    color: rgb(75, 9, 207);;
+    font-family: 'cinzel', serif;
+    color: rgb(75, 9, 207);
+    text-shadow: 2px 1px #0f0e0e;
     list-style: none;
     margin-left: 40%;
     display: flex;
@@ -100,4 +111,13 @@ body {
     
 }
 
+/* STYLED LINKS */
+
+a:link, a:visited, a:focus, a:active{
+    color: #ABE338;
+    text-decoration:none;
+}
+a:hover{
+    color: rgb(226, 28, 127);
+}
 
