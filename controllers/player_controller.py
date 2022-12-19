@@ -81,4 +81,3 @@ def add_player_to_session(id):
         return redirect('/management/players')
     else:
         return redirect('/management/players')
-    

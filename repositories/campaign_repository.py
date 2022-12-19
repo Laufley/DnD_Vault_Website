@@ -46,7 +46,7 @@ def select(id):
     return campaign
 
 def update(campaign):
-    sql = "UPDATE campaigns SET (title, genre, dm, max_capacity, details, price) = (%s, %s, %s, %s, %s, %s) WHERE id = %s"
+    sql = "UPDATE campaigns SET (title, genre, dm, max_capacity, price, details) = (%s, %s, %s, %s, %s, %s) WHERE id = %s"
     values = [campaign.title, campaign.genre, campaign.dm, campaign.max_capacity, campaign.price, campaign.details, campaign.id]
     run_sql(sql, values)
     
@@ -59,7 +59,7 @@ def campaigns_per_player(player_id):
     results = run_sql(sql, values)
 
     for row in results:
-        single_mission = Campaign(row['title'], row['genre'], row['dm'], row['max_capacity'], row['price'], row['details'])
-        missions.append(single_mission)
+        mission = Campaign(row['title'], row['genre'], row['dm'], row['max_capacity'], row['price'], row['details'])
+        missions.append(mission)
 
     return missions

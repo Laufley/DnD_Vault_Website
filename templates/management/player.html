@@ -7,16 +7,16 @@
             <li>{{guest.full_name}}</li>
             <li>{{guest.phone}}</li>
         </ul>
+    </div>
+
+    <div>
         <h2>Current Adventures:</h2>
         <ol>
         {% for mission in missions %}
             <li>{{mission.title}}</li>
         {% endfor %}
         </ol>
-
-
-            <a href="/management/players/{{guest.id}}/edit">Update</a>
-            
+            <a href="/management/players/{{guest.id}}/edit">Update player</a>
 
             <form class="delete" action="/management/player/{{guest.id}}/delete" method="POST">
             <input id="delete_player" type="submit" value="delete-player">
@@ -24,15 +24,21 @@
 
             <div>
                 <form action="/management/player/{{guest.id}}/join_session" method="post">
-                <label for="choose_campaign">Choose session:</label>
+                <label for="choose_campaign">Choose campaign:</label>
                 <select id="choose_campaign" name="campaign_id">
                     {% for session in available_sessions %}
                         <option value="{{ session.id }}">{{ session.title }}</option>
                     {% endfor %}
                     </select>
-            </div>
                 <button type="submit">Add to campaign</button>
-            </form>
-        
+            </form> 
+            </div>  
+
+            <!-- <div>
+                <form action=""
+                <!-- <a href="/management/session/{{session.id}}"><h4>Check campaign</h4></a>  -->
+            </div> 
+            
     </div>
+    
 {% endblock %}
