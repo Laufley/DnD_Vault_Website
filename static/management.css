@@ -22,37 +22,89 @@
 #board{
     font-style: none;
     margin-top: 1rem;
-    color: rgb(211, 211, 226);
+    color: rgba(227, 227, 220, 0.573);
     display: flex;
     flex-direction: column;
     align-items: left;
     width: 35%;
-    background-color: rgba(19, 40, 107, 0.77);
+    background-color: rgba(223, 235, 230, 0.77);
     border-radius: 5%;
+    border: 3.6mm ridge rgba(211, 40, 94, 0.978);
+}
+
+.board-list{
+    color: rgba(211, 40, 94, 0.978);
+}
+
+.board-list:hover{
+    color: rgba(50, 47, 47, 0.803);
 }
 
 /* MANGEMENT SESSIONS */
+.back-to{
+    margin-left: 3%;
+    color: white;
+    text-shadow: 2px 1px #0f0e0e;
+    text-decoration:underline;
+}
+
+.back-to:hover{
+    color: #ABE338;
+}
+
 .all-sessions{
-    font-style: none;
-    margin-top: 1rem;
-    color: rgb(211, 211, 226);
     display: flex;
+    margin-left: 20%;
+    padding: 5%;
+    font-style: none;
+    color: rgb(211, 211, 226);
     flex-direction: column;
-    align-items: left;
-    width: 35%;
-    background-color: rgba(19, 40, 107, 0.77);
+    width: 100%;
+    height: fit-content;
+    background-color: rgba(18, 15, 8, 0.57);
     border-radius: 5%;
+    margin-top: 2rem;
+    grid-area: all-list;
+    border: 3.6mm ridge rgba(211, 40, 94, 0.978);
 }
 
 .sessions-interact{
-    font-style: none;
-    margin-top: 1rem;
-    color: rgb(211, 211, 226);
     display: flex;
+    padding: 5%;
     flex-direction: column;
-    align-items: left;
-    width: 35%;
-    background-color: rgba(19, 40, 107, 0.77);
+    font-style: none;
+    color: rgb(211, 211, 226);
+    width:100%;
+    margin-top: -1rem;
+    margin-left: -15%;
+    background-color: rgba(30, 32, 38, 0.77);
     border-radius: 5%;
+    grid-area: interact;
+    border: double 1.5mm;
+    border-color: aqua;
+}
 
+#sessions-grid-container{
+    display: grid;
+    grid-template-areas: 
+    'all-list interact';
+    justify-content: space-between;
+}
+
+textarea{
+    background-color: #262525;
+    color: white;
+}   
+
+button{
+    background-color: rgba(234, 134, 165, 0.869);
+}
+
+button:hover{
+    background-color: rgba(211, 40, 94, 0.978);
+}
+
+.input-text{
+    background-color: #262525;
+    color: white;
 }

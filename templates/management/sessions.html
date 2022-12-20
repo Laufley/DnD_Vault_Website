@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 
 {% block content %}
-<a href="/management/board"><h4>>>Back to Management Board</h4></a>
+<a href="/management/board"><h3 class="back-to">>>Back to Management Board</h3></a>
+<div id="sessions-grid-container">
     <div id="sesssions" class="all-sessions">
         <h2>Current sessions</h2>
             <ol> 
@@ -18,31 +19,31 @@
 
             <div>
                 <label for="campaign_title">Title:</label>
-                <input type="text" id="campaign_title" name="title" placeholder="Campaign title" required autofocus>
+                <input class="input-text" type="text" id="campaign_title" name="title" placeholder="Campaign title" required autofocus>
             </div>
             <div>
                 <label for="genre">Genre:</label>
-                <input type="text" id="genre" name="genre" placeholder="Campaign genre">
+                <input class="input-text" type="text" id="genre" name="genre" placeholder="Campaign genre">
             </div>
             <div>
                 <label for="dm">Dungeon Master:</label>
-                <input type="text" id="dm" name="dm" placeholder="Name">
+                <input class="input-text" type="text" id="dm" name="dm" placeholder="Name">
             </div>
             <div>
                 <label for="max_capacity">Party limit:</label>
-                <input type="text" id="max_capacity" name="max_capacity" placeholder="max party members">
+                <input class="input-text" type="text" id="max_capacity" name="max_capacity" placeholder="max party members">
             </div>
             <div>
                 <label for="price">Price:</label>
-                <input type="text" id="price" name="price" placeholder="price per session">
+                <input class="input-text" type="text" id="price" name="price" placeholder="price per session">
             </div>
             <div>
                 <label for="details">details:</label>
-                <textarea cols="90" id="details" name="details" rows="14" placeholder="campaign brief"></textarea>
+                <textarea cols="80" id="details" name="details" rows="14" placeholder="campaign brief"></textarea>
                 
             </div>
             <button type="submit">Add Session</button>
             </form>
     </div>
-        
+</div>      
 {% endblock %}
