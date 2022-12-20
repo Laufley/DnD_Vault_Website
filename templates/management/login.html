@@ -1,7 +1,13 @@
 <!DOCTYPE html">
 <html>
 <head>
-<title>D&D Club</title>
+<<title>D&D Vault</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Dancing+Script&family=Lobster&family=Rubik+Vinyl&family=Zen+Dots&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='management.css') }}">
     <style>
         BODY.enterPage{
         cursor: hand;
@@ -13,11 +19,14 @@
         }
     </script>
 </head>
-<body class="enterPage"  onclick="goto();">
+<body class="login-page" class="enterPage"  onclick="goto();">
+    <di id="login-text">
+    <h1>Log in to Start Management mode</h1>
+    <h2>USER: _ _ _ _ _ _ _ _</h2>
+    <h2>PASSWORD: _ _ _ _ _ _ _ _ _ _ _ _</h2>
+    <img id="key" src=https://images7.alphacoders.com/332/thumb-1920-332764.jpg>
 </body>
 </html>
 
-<h1>Log in to Start Management mode</h1>
 
-<h2>PASSWORD: _ _ _ _ _ _</h2>
 

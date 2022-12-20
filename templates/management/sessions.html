@@ -1,9 +1,8 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <div id="sesssions">
-        <a href="/management/board"><h4>>>Back to Management Board</h4></a>
-
+<a href="/management/board"><h4>>>Back to Management Board</h4></a>
+    <div id="sesssions" class="all-sessions">
         <h2>Current sessions</h2>
             <ol> 
             {% for session in all_sessions %}
@@ -13,7 +12,7 @@
             {% endfor %}
             </ol>
     </div>
-    <div> 
+    <div class="sessions-interact"> 
         <h2>Add session</h2>
             <form action="/management/sessions" method="post">
 

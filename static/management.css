@@ -1,0 +1,58 @@
+/* LOGIN PAGE */
+.login-page {
+    background: black;
+    background-size: cover;
+    /* background-color: black; */   
+}
+
+#login-text{
+    color: rgb(215, 213, 213);
+}
+
+#key{
+    width:100%;
+    height:100%;
+}
+
+/* MANAGEMENT BOARD */
+
+#board-image{
+    background: url('images/dice.jpeg');
+}
+#board{
+    font-style: none;
+    margin-top: 1rem;
+    color: rgb(211, 211, 226);
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 35%;
+    background-color: rgba(19, 40, 107, 0.77);
+    border-radius: 5%;
+}
+
+/* MANGEMENT SESSIONS */
+.all-sessions{
+    font-style: none;
+    margin-top: 1rem;
+    color: rgb(211, 211, 226);
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 35%;
+    background-color: rgba(19, 40, 107, 0.77);
+    border-radius: 5%;
+}
+
+.sessions-interact{
+    font-style: none;
+    margin-top: 1rem;
+    color: rgb(211, 211, 226);
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 35%;
+    background-color: rgba(19, 40, 107, 0.77);
+    border-radius: 5%;
+
+}
