@@ -52,7 +52,7 @@
     color: #ABE338;
 }
 
-.all-sessions{
+.all-the-sessions{
     display: flex;
     margin-left: 20%;
     padding: 5%;
@@ -80,8 +80,8 @@
     background-color: rgba(30, 32, 38, 0.77);
     border-radius: 5%;
     grid-area: interact;
-    border: double 1.5mm;
-    border-color: aqua;
+    border: dotted;
+    border-color: rgb(80, 226, 156);
 }
 
 #sessions-grid-container{
@@ -95,6 +95,74 @@ textarea{
     background-color: #262525;
     color: white;
 }   
+
+button{
+    background-color: rgba(234, 134, 165, 0.869);
+}
+
+button:hover{
+    background-color: rgba(211, 40, 94, 0.978);
+}
+
+.input-text{
+    background-color: #262525;
+    color: white;
+}
+
+
+/* MANGEMENT PLAYERS */
+
+.back-to{
+    margin-left: 3%;
+    color: white;
+    text-shadow: 2px 1px #0f0e0e;
+    text-decoration:underline;
+}
+
+.back-to:hover{
+    color: #ABE338;
+}
+
+.list-of-players{
+    display: flex;
+    grid-area: list-of-players;
+    flex-direction: column;
+    margin-left: 42%;
+    margin-top: 30%;
+    padding: 2%;
+    font-style: none;
+    color: rgb(211, 211, 226);
+    width: 105%;
+    height: max-content;
+    background-color: rgba(18, 15, 8, 0.57);
+    border-radius: 5%;
+    margin-top: 2rem;
+    border: solid rgba(211, 40, 94, 0.978); 
+}
+
+.manage-players{
+    display: flex;
+    grid-area: manage;
+    padding: 5%;
+    flex-direction: column;
+    font-style: none;
+    color: rgb(211, 211, 226);
+    width: max-content;
+    margin-left: -28%;
+    margin-top: -30%;
+    background-color: rgba(30, 32, 38, 0.77);
+    border-radius: 5%;
+    grid-area: interact-players;
+    border: double 1.5mm;
+    border-color: rgb(80, 226, 156);
+}
+
+#players-grid-container{
+    display:grid;
+    grid-template-areas: 
+    'list-of-players manage'
+    'list-of-players manage';
+}  
 
 button{
     background-color: rgba(234, 134, 165, 0.869);

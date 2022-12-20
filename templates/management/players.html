@@ -1,8 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
-<a href="/management/board"><h4>>>Back to Management Board</h4></a>
-    <div id="players">
+<a href="/management/board"><h3 class="back-to">>>Back to Management Board</h3></a>
+<section id="players-grid-container"></div>
+    <div id="players" class="list-of-players">
         <h2>Current players</h2>
             <ol> 
             {% for guest in all_players %}
@@ -12,10 +13,9 @@
             {% endfor %}
             </ol>
     </div>
-    <div> 
+    <div class="manage-players"> 
         <h2>Add player</h2>
             <form action="/management/players" method="post">
-
             <div>
                 <label for="name">Full Name:</label>
                 <input type="text" id="name" name="full_name" placeholder="Name and Surname" required autofocus>
@@ -27,5 +27,5 @@
             <button type="submit">Add player</button>
             </form>
     </div>
-        
+</section>   
 {% endblock %}
