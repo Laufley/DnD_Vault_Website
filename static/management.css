@@ -176,3 +176,69 @@ button:hover{
     background-color: #262525;
     color: white;
 }
+
+/* MANAGEMENT SESSION */
+
+
+.single-session{
+    display: flex;
+    flex-direction: column;
+    grid-area: single-session;
+    padding: 2%;
+    font-style: none;
+    color: rgb(211, 211, 226);
+    width: max-content;
+    height: max-content;
+    margin-left: 5%;
+    background-color: rgba(18, 15, 8, 0.57);
+    border-radius: 5%;
+    margin-top: 2rem;
+    border: solid rgba(211, 40, 94, 0.978);
+}
+    
+
+.party-container{
+    display: flex;
+    flex-direction: column;
+    grid-area: party;
+    padding: 2%;
+    font-style: none;
+    margin-left: 60%;
+    margin-top: -25%;
+    color: rgb(211, 211, 226);
+    width: max-content;
+    height: max-content;
+    background-color: rgba(30, 32, 38, 0.77);
+    border-radius: 5%;
+    grid-area: interact-players;
+    border: double 1.5mm;
+    border-color: rgb(80, 226, 156);  
+    text-align: left;
+}
+
+#session-grid-ontainer{
+    display:grid;
+    grid-template-areas: 
+    'single-session party';
+    grid-template-columns: 60px 60px;
+} 
+#update-session{
+    color: rgb(55, 129, 240);
+}
+
+#update-session:hover{
+    color: lightskyblue;
+}
+
+#delete_session{
+    background-color: rgba(234, 134, 165, 0.869);
+}
+
+#delete_session:hover{
+    background-color: rgba(211, 40, 94, 0.978);
+}
+
+#little-title{
+    color: rgba(40, 171, 211, 0.978);
+    text-decoration: dashed;
+}
