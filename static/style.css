@@ -54,7 +54,6 @@ body {
     width: 100%;
 }
 
-
 #navigation > ul {
     font-family: 'cinzel', serif;
     color: rgb(9, 207, 78);;
@@ -82,7 +81,6 @@ body {
     background-size: cover;
     grid-area: main;
     min-height: 80vh;
-    
     }
     
 #footer {

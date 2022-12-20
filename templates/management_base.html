@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='management.css') }}">
 </head>
 <body id="grid-container">
-    <header id = "header">
+    <header id = "management-header">
         <div id="main_title">
         <h1><a href="/home" class="main_title_link" >D&D Vault</a></h1>
         </div>
@@ -35,20 +35,11 @@
             </ul>
         </nav>
     </header>
-    <main id="main">
-        {% block content %}
+        {% block management_base %}
 
         {% endblock%}
-    </main>
-    <footer id="footer">
-    <ul>
-        <li>
-            <a href="/about">About</a>
-        </li>
-        <li>
-            <a href="/contact">Contact us</a>
-        </li>
-    </ul>
+    <footer id="management-footer">
+        <p> D&D Vault MANAGER MODE </p>
     </footer>
 </body>
 </html>

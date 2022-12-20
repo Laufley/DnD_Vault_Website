@@ -14,11 +14,52 @@
     height:100%;
 }
 
+/* MANAGEMENT BASE */
+#management-header{
+    grid-area: header;
+    background: url('images/dark_wood.jpeg');
+    height: 5.3rem;
+    min-height: 15vh;
+    width: 100%;
+    }
+    
+#management-main{
+    background: url('images/tavern.jpeg');
+    background-size: cover;
+    grid-area: main;
+    min-height: 80vh;
+    
+    }
+    
+#management-footer {
+    background: url('images/dark_wood.jpeg');
+    grid-area: footer;
+    max-height: 2rem;
+    min-height: 5vh;
+    display: flex;
+    width: 100%;
+    }
+
+#grid-container{
+    display: grid;
+    grid-template-areas: 
+    'header header'
+    'main main'
+    'footer footer'; 
+    grid-template-columns: 50% 50%;
+    
+    }
+
+#management-footer > p{
+    color: rgb(206, 202, 202);
+    display: flex;
+    vertical-align: middle;
+    font-family: 'cinzel', serif;
+    margin-left: 40%;
+}
+        
 /* MANAGEMENT BOARD */
 
-#board-image{
-    background: url('images/dice.jpeg');
-}
 #board{
     font-style: none;
     margin-top: 1rem;
@@ -30,6 +71,27 @@
     background-color: rgba(223, 235, 230, 0.77);
     border-radius: 5%;
     border: 3.6mm ridge rgba(211, 40, 94, 0.978);
+}
+
+#management_footer {
+    background: url('images/stone_background.jpeg');
+    grid-area: footer;
+    max-height: 2rem;
+    min-height: 5vh;
+    display: flex;
+    width: 100%;
+    }
+
+#management_footer {
+    display: flex;
+    justify-content: center;
+    font-family: 'cinzel', serif;
+    text-shadow: 2px 1px #0f0e0e;
+    list-style: none;
+    margin-left: 40%;
+    display: flex;
+    column-gap: 35px;
+    text-align: center;
 }
 
 .board-list{
