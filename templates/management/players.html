@@ -8,7 +8,7 @@
             <ol> 
             {% for guest in all_players %}
                 <li>
-                    <a href="/management/player/{{guest.id}}" target="_blank" id="player_list"> {{guest.full_name}}</a>
+                    <a href="/management/player/{{guest.id}}" id="player_list"> {{guest.full_name}}</a>
                 </li>
             {% endfor %}
             </ol>

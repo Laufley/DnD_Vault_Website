@@ -3,7 +3,7 @@
 {% block management_base %}
     <h2><a href="/management/players">>>Back to Players</a></h2>
     <div id="player-grid-container"></div>
-        <div class="single-player">
+        <div id="single-player">
             <h3 id="little-title"> Player information</h3>
             <ul>
                 <li>{{guest.full_name}}</li>
@@ -11,7 +11,7 @@
             </ul>
         </div>
 
-        <div class="current-adventures-container">
+        <div id="current-adventures">
             <h3 id="little-title">Current Adventures:</h3>
                 <ol>
                 {% for mission in missions %}
@@ -23,18 +23,17 @@
             <form class="delete" action="/management/player/{{guest.id}}/delete" method="POST">
             <input id="delete_player" type="submit" value="delete-player">
             </form>
-
-            <div>
-                <form action="/management/player/{{guest.id}}/join_session" method="post">
-                <label for="choose_campaign">Choose campaign:</label>
-                <select id="choose_campaign" name="campaign_id">
-                    {% for session in available_sessions %}
-                    <option value="{{ session.id }}">{{ session.title }}</option>
-                    {% endfor %}
-                </select>
-                        <button type="submit">Add to campaign</button>
-                </form> 
-            </div>           
         </div>
+        <div id="extra-options-player">
+            <form action="/management/player/{{guest.id}}/join_session" method="post">
+            <label for="choose_campaign">Choose campaign:</label>
+            <select id="choose_campaign" name="campaign_id">
+                {% for session in available_sessions %}
+                <option value="{{ session.id }}">{{ session.title }}</option>
+                {% endfor %}
+            </select>
+                    <button type="submit">Add to campaign</button>
+            </form> 
+        </div>                  
     </div>
 {% endblock %}
