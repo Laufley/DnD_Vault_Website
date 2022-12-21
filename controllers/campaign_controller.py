@@ -33,7 +33,8 @@ def create_campaign():
     max_capacity = request.form['max_capacity']
     price = request.form['price']
     details = request.form['details']
-    session = Campaign(title, genre, dm, max_capacity, price, details)
+    url = request.form['url']
+    session = Campaign(title, genre, dm, max_capacity, price, details, url)
     campaign_repository.save(session)
     return redirect('/management/sessions')
 

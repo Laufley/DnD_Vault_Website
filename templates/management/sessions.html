@@ -38,9 +38,14 @@
                 <input class="input-text" type="text" id="price" name="price" placeholder="price per session">
             </div>
             <div>
-                <label for="details">details:</label>
+                <label for="details">Details:</label>
                 <textarea cols="80" id="details" name="details" rows="14" placeholder="campaign brief"></textarea>
                 
+            </div>
+            <div>
+                <label for="url">https:// image URL:</label>
+                <input type="url" name="url" id="url" placeholder="https://image_link.com" pattern="https://.*" size="30"
+                    required>
             </div>
             <button type="submit">Add Session</button>
             </form>

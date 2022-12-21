@@ -138,3 +138,13 @@ margin-left: 2%;
     color:#ABE338;
 }
 
+
+/* CAMPAIGN */
+.session-image-container{
+    grid-area: image;
+    display: flex;
+    flex-direction: column;
+    margin-left: 45%;
+    margin-top: -25%;
+
+}

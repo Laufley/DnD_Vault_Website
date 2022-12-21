@@ -11,7 +11,13 @@
             <li>Max number of players: {{campaign.max_capacity}}</li>
             <li>price per session: {{campaign.price}}</li>
             <li>Campaign brief: {{campaign.details}}</li>
-            <img src="{{campaign.picture_url}}"">
+            <!-- <img src="{{campaign.picture_url}}""> -->
+
+            <div class="campaign-image-container">
+                <img src="{{campaign.picture_url}}" width="600" height="400">
+            </div>
         </ul>
     </div>
+
+
 {% endblock %}

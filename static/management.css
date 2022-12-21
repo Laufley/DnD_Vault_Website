@@ -57,18 +57,12 @@
     justify-content: center;
     margin-left: 30rem;
     margin-top: 0.5rem;
-
-    /* color: rgb(206, 202, 202);
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    font-family: 'cinzel', serif;
-    margin-left: 40%; */
 }
-        
-/* MANAGEMENT BOARD */
 
+
+/* MANAGEMENT BOARD */
 #board{
+    max-height:450px;
     font-style: none;
     margin-top: 1rem;
     color: rgba(227, 227, 220, 0.573);
@@ -257,7 +251,7 @@ button:hover{
     color: rgb(211, 211, 226);
     width: max-content;
     height: max-content;
-    margin-left: 5%;
+    margin-left: 10%;
     background-color: rgba(18, 15, 8, 0.57);
     border-radius: 5%;
     margin-top: 2rem;
@@ -271,7 +265,9 @@ button:hover{
     grid-area: party;
     padding: 2%;
     font-style: none;
-    margin-left: 60%;
+    /* margin-left: 60%;
+    margin-top: -25%; */
+    margin-left: 50%;
     margin-top: -25%;
     color: rgb(211, 211, 226);
     width: max-content;
@@ -284,11 +280,11 @@ button:hover{
     text-align: left;
 }
 
+
 #session-grid-ontainer{
     display:grid;
     grid-template-areas: 
     'single-session party';
-    grid-template-columns: 60px 60px;
 } 
 #update-session{
     color: rgb(55, 129, 240);
