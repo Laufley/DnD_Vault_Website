@@ -14,7 +14,7 @@
                 <li><span style="color:rgba(211, 194, 40, 0.978); font-style: italic">PRICE: </span> {{session.price}} <span></span> £</span></li>
                 <li><span style="color:rgba(211, 194, 40, 0.978); font-style: italic">CAMPAIGN DETAILS: </span> {{session.details}}</li>
 
-                <a id="update-session" href="/management/sessions/{{session.id}}/edit">>>Update Session<<</a>
+                <a class="update-button" href="/management/sessions/{{session.id}}/edit">>>Update Session<<</a>
         
                 <form class="delete" action="/management/session/{{session.id}}/delete" method="POST">
                 <input id="delete_session" type="submit" value="delete-session">

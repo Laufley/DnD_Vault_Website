@@ -18,12 +18,15 @@
                     <li>{{mission.title}}</li>
                 {% endfor %}
                 </ol>
-            <a href="/management/players/{{guest.id}}/edit">Update player</a>
+        </div>
 
+        <div id="action-players">
+            <a class="update-button" href="/management/players/{{guest.id}}/edit">>Update player</a>
             <form class="delete" action="/management/player/{{guest.id}}/delete" method="POST">
-            <input id="delete_player" type="submit" value="delete-player">
+            <input class="button" id="delete_player" type="submit" value="delete-player">
             </form>
         </div>
+
         <div id="extra-options-player">
             <form action="/management/player/{{guest.id}}/join_session" method="post">
             <label for="choose_campaign">Choose campaign:</label>

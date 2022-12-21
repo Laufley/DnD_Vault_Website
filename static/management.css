@@ -156,16 +156,16 @@
     justify-content: space-between;
 }
 
-textarea{
+.textarea{
     background-color: #262525;
     color: white;
 }   
 
-button{
+.button{
     background-color: rgba(234, 134, 165, 0.869);
 }
 
-button:hover{
+.button:hover{
     background-color: rgba(211, 40, 94, 0.978);
 }
 
@@ -287,11 +287,11 @@ button:hover{
     grid-template-areas: 
     'single-session party';
 } 
-#update-session{
+.update-button{
     color: rgb(55, 129, 240);
-}
+} 
 
-#update-session:hover{
+.update-button:hover{
     color: lightskyblue;
 }
 
@@ -339,17 +339,17 @@ button:hover{
     background-color: rgba(30, 32, 38, 0.77);
     border-radius: 5%;
     grid-area: advenures;
-    border: solid 1mm rgba(211, 40, 94, 0.978);
+    border: solid 1mm rgba(205, 211, 40, 0.978);
     text-align: left;
 }
 
 #extra-options-player{
     display: flex;
     flex-direction: column;
-    grid-area: party;
+    grid-area: interactions;
     padding: 2%;
     margin-left: 25%;
-    margin-top: 10%;
+    margin-top: 5%;
     color: rgb(211, 211, 226);
     width: max-content;
     height: max-content;
@@ -361,10 +361,26 @@ button:hover{
     text-align: left;
 }
 
-#session-grid-ontainer{
+#action-players{
+    display: flex;
+    flex-direction: column;
+    grid-area: action-players;
+    padding: 2%;
+    color: rgb(211, 211, 226);
+    width: 16%;
+    height: max-content;
+    margin-left: 18%;
+    background-color: rgba(30, 32, 38, 0.77);
+    border: solid  rgba(34, 174, 230, 0.978);
+    border-radius: 5%;
+    margin-top: 2.5rem;
+}
+
+#player-grid-ontainer{
     display:grid;
     grid-template-areas: 
-    'player adventures interactions';
+    'player party' 
+    'action-players interactions';
 } 
 
 /* CAMPAIGN */
@@ -404,4 +420,51 @@ button:hover{
     color: rgb(80, 226, 156); 
     border-radius: 5%;
     padding: 1%;
+}
+
+/* UPDATE PLAYER FORM */
+
+#update-player{
+    display: flex;
+    flex-direction: column;
+    grid-area: player;
+    padding: 2%;
+    color: rgb(211, 211, 226);
+    width: max-content;
+    height: max-content;
+    margin-left: 18%;
+    background-color: rgba(30, 32, 38, 0.77);
+    border: solid 1mm rgba(211, 40, 94, 0.978);
+    border-radius: 5%;
+    margin-top: 2rem;  
+}
+
+/* UPDATE Session FORM */
+
+#update-session{
+    display: flex;
+    flex-direction: column;
+    grid-area: player;
+    padding: 2%;
+    color: rgb(211, 211, 226);
+    width: max-content;
+    height: max-content;
+    margin-left: 18%;
+    margin-top: -1%;
+    background-color: rgba(30, 32, 38, 0.77);
+    border: solid 1mm rgba(211, 40, 94, 0.978);
+    border-radius: 5%;
+}
+
+.text-area{
+    background-color: #262525;
+    color: white;
+}   
+
+.button{
+    background-color: rgba(234, 134, 165, 0.869);
+}
+
+.button:hover{
+    background-color: rgba(211, 40, 94, 0.978);
 }

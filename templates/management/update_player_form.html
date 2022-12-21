@@ -1,18 +1,21 @@
 {% extends 'base.html'%}
 
 {% block content %}
-<h1>UPDATE PLAYER</h1>
-    <form action="/management/player/{{guest.id}}/update" method="post"> 
-        <div>
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" name="full_name" value="{{guest.full_name}}" required autofocus>
-        </div>
-        <div>
-            <label for="phone">Phone Number:</label>
-            <input type="text" id="phone" name="phone" value="{{guest.phone}}" required autofocus>
-        </div>
-        
-        <button type="submit"> Update </button>
-
-    </form>
+<a href="/management/players"><h2 class="back-to">>>Back to Players</h2></a>
+    <div id="update-player">
+    <h1>UPDATE PLAYER</h1>
+        <form action="/management/player/{{guest.id}}/update" method="post"> 
+            <div>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="full_name" value="{{guest.full_name}}" required autofocus>
+            </div>
+            <div>
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone" value="{{guest.phone}}" required autofocus>
+            </div>
+            
+            <button type="submit"> Update </button>
+        </form>
+    </div>
 {% endblock %}
+

@@ -1,34 +1,38 @@
 {% extends 'base.html'%}
 
 {% block content %}
-<h1>UPDATE Session</h1>
-    <form action="/management/session/{{session.id}}/update" method="post"> 
-        <div>
-            <label for="title">Title:</label>
-            <input type="text" id="title" name="title" value="{{session.title}}" required autofocus>
-        </div>
-        <div>
-            <label for="genre">Genre:</label>
-            <input type="text" id="genre" name="genre" value="{{session.genre}}">
-        </div>
-        <div>
-            <label for="dm"> Dungeon Master:</label>
-            <input type="text" id="dm" name="dm" value="{{session.dm}}">
-        </div>
-        <div>
-            <label for="max_capacity">Party limit:</label>
-            <input type="text" id="max_capacity" name="max_capacity" value="{{session.max_capacity}}">
-        </div>
-        <div>
-            <label for="price">price:</label>
-            <input type="text" id="price" name="price" value="{{session.price}}" placeholder="per session">
-        </div>
-        <div>
-            <label for="details">details:</label>
-            <textarea cols="90" id="details" name="details" rows="14" value="{{session.details}}" placeholder="campaign brief"></textarea>
-        </div>
-        
-        <button type="submit"> Update</button>
-
-    </form>
+<a href="/management/sessions"><h2 class="back-to">>>Back to Sessions</h2></a>
+    <div id="update-session">
+    <h1>UPDATE Session</h1>
+        <form action="/management/session/{{session.id}}/update" method="post"> 
+            <div>
+                <label for="title">Title:</label>
+                <input type="text" class="input-text" id="title" name="title" value="{{session.title}}"  placeholder="Campaign title" required autofocus>
+            </div>
+            <div>
+                <label for="genre">Genre:</label>
+                <input type="text" class="input-text" id="genre" name="genre" value="{{session.genre}}" placeholder="Genre">
+            </div>
+            <div>
+                <label for="dm"> Dungeon Master:</label>
+                <input type="text" class="input-text" id="dm" name="dm" value="{{session.dm}}" placeholder="DM name">
+            </div>
+            <div>
+                <label for="max_capacity">Party limit:</label>
+                <input type="text" class="input-text" id="max_capacity" name="max_capacity" value="{{session.max_capacity}}" placeholder="max players">
+            </div>
+            <div>
+                <label for="price">price:</label>
+                <input type="text" class="input-text" id="price" name="price" value="{{session.price}}" placeholder="per session">
+            </div>
+            <div>
+                <label for="details">Details:</label>
+                <textarea class="text-area" class="input-text" cols="80" id="details" name="details" rows="14" value="{{session.details}}" placeholder="campaign brief"></textarea>
+                
+            </div>
+            
+            <button type="submit"> Update</button>
+        </form>
+    </div>
+    
 {% endblock %}
