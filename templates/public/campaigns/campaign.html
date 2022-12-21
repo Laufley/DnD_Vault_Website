@@ -2,21 +2,23 @@
 
 {% block content %}
     <div>
-        <a href="/home"> <h3> >> Back to campaigns</h3></a>
-
-        <h2>{{campaign.title}} details</h2>
-        <ul>
-            <li>Genre: {{campaign.genre}}</li>
-            <li>Dungeon Master: {{campaign.dm}}</li>
-            <li>Max number of players: {{campaign.max_capacity}}</li>
-            <li>price per session: {{campaign.price}}</li>
-            <li>Campaign brief: {{campaign.details}}</li>
-            <!-- <img src="{{campaign.picture_url}}""> -->
-
-            <div class="campaign-image-container">
-                <img src="{{campaign.picture_url}}" width="600" height="400">
+        <a href="/home"> <h2 class="back-to"> >> Back to campaigns</h2></a>
+        </div id="single-campaign-grid-container">
+            <div id="campaign-details-container">
+                <h2> <span style="color:rgba(211, 194, 40, 0.978); font-style: italic"> {{campaign.title}} </span> - Campaign Details</h2>
+                <ul>
+                    <li><span style="color:rgba(211, 194, 40, 0.978); font-style: italic"> Genre:</span> {{campaign.genre}} </li>
+                    <li><span style="color:rgba(211, 194, 40, 0.978); font-style: italic"> Dungeon Master:</span>  {{campaign.dm}}</li>
+                    <li><span style="color:rgba(211, 194, 40, 0.978); font-style: italic"> Max number of players:</span> {{campaign.max_capacity}} </li>
+                    <li><span style="color:rgba(211, 194, 40, 0.978); font-style: italic"> price per session:</span> {{campaign.price}} </li>
+                    <li><span style="color:rgba(211, 194, 40, 0.978); font-style: italic"> Campaign brief:</span> {{campaign.details}} </li>
+                </ul>
             </div>
-        </ul>
+
+            <div id="campaign-image-container">
+                <img class="img-style" src="{{campaign.picture_url}}" width="600" height="400">
+            </div>
+        </div>
     </div>
 
 

@@ -365,3 +365,42 @@ button:hover{
     grid-template-areas: 
     'player adventures interactions';
 } 
+
+/* CAMPAIGN */
+
+#campaign-details-container{
+    display: flex;
+    flex-direction: column;
+    grid-area: campaign;  
+    margin-left: 3%;
+    padding: 2%;
+    color: rgb(211, 211, 226);
+    width: max-content;
+    height: max-content;
+    background-color: rgba(30, 32, 38, 0.77);
+    border: solid 1mm rgba(211, 40, 94, 0.978);
+    border-radius: 5%;
+    margin-top: 2rem;  
+}
+
+#campaign-image-container{
+    display: flex;
+    flex-direction: column;
+    grid-area:campaign-img;
+    margin-left: 49%;
+    margin-top: -22%;
+
+}
+
+#single-campaign-grid-container{
+    display:grid;
+    grid-template-areas: 
+    'campaign campaign-img';
+}
+
+.img-style{
+    border: double 1.5mm;
+    color: rgb(80, 226, 156); 
+    border-radius: 5%;
+    padding: 1%;
+}
