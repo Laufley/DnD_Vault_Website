@@ -241,3 +241,25 @@ margin-left: 2%;
     margin-top: 2rem;
     border: 3.6mm ridge rgba(255, 255, 255, 0.978);
 }
+
+/* ABOUT */
+
+.about-style{
+    display: flex;
+    padding: 1%;
+    flex-direction: column;
+    justify-items: center;
+    color: rgb(199, 199, 201);
+    width: fit-content;
+    margin-top: 1rem;
+    margin-left: 4%;
+    background-color: rgba(24, 25, 30, 0.909);
+    border-radius: 5%;
+    grid-area: interact;
+    border: dotted;
+    border-color: rgb(218, 228, 223);
+}
+
+#how-to{
+    color:rgb(226, 28, 127);
+}

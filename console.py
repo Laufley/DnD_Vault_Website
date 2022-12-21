@@ -51,7 +51,7 @@ campaign_repository.save(campaign_4)
 
 joint_1 = Player_history(player_1, campaign_1)
 joint_2 = Player_history(player_2, campaign_4)
-joint_3 = Player_history(player_3, campaign_2)
+joint_3 = Player_history(player_3, campaign_3)
 joint_4 = Player_history(player_4, campaign_1)
 joint_5 = Player_history(player_5, campaign_3)
 joint_6 = Player_history(player_6, campaign_2)
