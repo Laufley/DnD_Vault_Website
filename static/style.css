@@ -99,9 +99,9 @@ body {
     text-shadow: 2px 1px #0f0e0e;
     list-style: none;
     margin-left: 40%;
-    display: flex;
     column-gap: 35px;
     text-align: center;
+    margin-top: 0.5rem;
 }
         
 #grid-container{

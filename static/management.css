@@ -50,12 +50,20 @@
     
     }
 
-#management-footer > p{
+#management-footer-text {
+    font-family: 'cinzel', serif;
     color: rgb(206, 202, 202);
     display: flex;
-    vertical-align: middle;
+    justify-content: center;
+    margin-left: 30rem;
+    margin-top: 0.5rem;
+
+    /* color: rgb(206, 202, 202);
+    display: flex;
+    justify-content: center;
+    text-align: center;
     font-family: 'cinzel', serif;
-    margin-left: 40%;
+    margin-left: 40%; */
 }
         
 /* MANAGEMENT BOARD */
