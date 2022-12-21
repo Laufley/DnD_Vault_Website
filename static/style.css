@@ -148,3 +148,20 @@ margin-left: 2%;
     margin-top: -25%;
 
 }
+
+/* DM */
+#dm-info{
+    color: rgb(226, 226, 226);
+    margin-left: 5%;
+    text-shadow: #0f0e0e;
+    margin-left: 30%;
+    margin-top: 2rem;
+    padding: 5%;
+    width: max-content;
+    height: fit-content;
+    color: rgb(211, 211, 226);
+    background-color: rgba(18, 15, 8, 0.799);
+    border-radius: 5%;
+    border: solid red;
+    
+}
