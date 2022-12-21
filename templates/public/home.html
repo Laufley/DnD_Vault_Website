@@ -2,21 +2,21 @@
 
 {% block content %}
 
-<div id="campaigns">
-        <ol id="home_list_campaigns"> 
-            <h3 >CHOOSE YOUR CAMPAIGN :</h3>
-        {% for campaign in all_campaigns %}
-            <li>
-                <a class="linked_text" href="/campaign/{{campaign.id}}" id="campaign_list"><h2> {{campaign.title}}</h2></a>
-            </li>
-        {% endfor %}
-        </ol>    
-</div>
-<div id="reminder"> 
-    <h1> <a href="/contact"> Contact us </a> <br>
-    to book your adventure! <br>
-    ◦◡◦  </h1>
-</div>
+    <div id="campaigns">
+            <ol id="home_list_campaigns"> 
+                <h3 >CHOOSE YOUR CAMPAIGN :</h3>
+            {% for campaign in all_campaigns %}
+                <li>
+                    <a class="linked_text" href="/campaign/{{campaign.id}}" id="campaign_list"><h2> {{campaign.title}}</h2></a>
+                </li>
+            {% endfor %}
+            </ol>    
+    </div>
+    <div id="reminder"> 
+        <h1> <a href="/contact"> Contact us </a> <br>
+        to book your adventure! <br>
+        ◦◡◦  </h1>
+    </div>
 {% endblock %}
 
 
