@@ -223,3 +223,21 @@ margin-left: 2%;
     margin-top: 2rem;
     border: 3.6mm ridge rgba(255, 255, 255, 0.978);
 }
+
+/* CONTACT US */
+.contact-us{
+    display: flex;
+    margin-left: 5%;
+    padding: 2%;
+    text-align: center;
+    list-style: none;
+    font-style: none;
+    color: rgb(211, 211, 226);
+    flex-direction: column;
+    width: 80%;
+    height: fit-content;
+    background-color: rgba(18, 15, 8, 0.858);
+    border-radius: 5%;
+    margin-top: 2rem;
+    border: 3.6mm ridge rgba(255, 255, 255, 0.978);
+}
