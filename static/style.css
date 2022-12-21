@@ -165,3 +165,61 @@ margin-left: 2%;
     border: solid red;
     
 }
+
+/* UPCOMING EVENTS */
+
+#events{
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    margin-top: 16%;
+    margin-left: 49%;
+    color: rgb(211, 211, 226);
+    width: max-content;
+    height: max-content;
+    background-color: rgba(30, 32, 38, 0.77);
+    border-radius: 5%;
+    grid-area: advenures;
+    border: solid 1mm rgba(211, 180, 40, 0.978);
+    box-shadow: white;
+    text-align: left;
+}
+
+#video-box{
+    display: flex;
+    flex-direction: column;
+    margin-left: 8%;
+    margin-top: -27%;
+}
+
+/* Tips and guides */
+#guides{
+    display: flex;
+    margin-left: 5%;
+    font-style: none;
+    padding: 1mm;
+    color: rgb(13, 11, 3);
+    flex-direction: column;
+    width: 50%;
+    height: fit-content;
+    background-color: rgba(231, 229, 222, 0.799);
+    border-radius: 5%;
+    margin-top: 1rem;
+    border: 1 solid rgb(255, 255, 255);
+    
+}
+
+#list-of-ressources{
+    display: flex;
+    margin-left: 5%;
+    padding: 2%;
+    font-style: none;
+    color: rgb(211, 211, 226);
+    flex-direction: column;
+    width: 80%;
+    height: fit-content;
+    background-color: rgba(18, 15, 8, 0.799);
+    border-radius: 5%;
+    margin-top: 2rem;
+    border: 3.6mm ridge rgba(255, 255, 255, 0.978);
+}

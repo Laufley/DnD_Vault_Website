@@ -2,17 +2,17 @@
 
 {% block content %}
     <a href="/home"> <h2 class="back-to"> >> Back to Home page</h2></a>
-    <div>
-        <h3>This Saturday 24th at 1pm <br>
+    <div id="events">
+        <h3>This <span style="color:rgba(211, 194, 40, 0.978)">Saturday 24th at 1pm </span> <br>
             come to join us for a book sining of <br>
-            BRANDON SANDERSON'S NEW BOOK <br>
+            <span style="color:rgba(231, 234, 11, 0.978)">BRANDON SANDERSON'S NEW BOOK </span> <br>
         </h3>
-
-        <video width="400" 
-        height="350" 
-        controls poster= "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190710102234/download3.png">
-        <source src= "https://www.youtube.com/watch?v=BHJsnWmz9mk" type="video/mp4">
-
     </div>
+    <div id="video-box">
+        <video width="500" height="350" controls>
+        <source src= "https://www.youtube.com/watch?v=BHJsnWmz9mk" type="video/mp4">
+    </div>
+
+</video>
 
 {% endblock %}
