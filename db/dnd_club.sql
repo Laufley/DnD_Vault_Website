@@ -15,7 +15,8 @@ CREATE TABLE campaigns (
     dm VARCHAR(255),
     max_capacity INT,
     price INT,
-    details VARCHAR(255) 
+    details VARCHAR(255),
+    picture_url VARCHAR(255)
 );
 
 CREATE TABLE players_history (
